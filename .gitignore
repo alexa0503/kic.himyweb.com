@@ -1,0 +1,14 @@
+/bower_components
+/node_modules
+/public/uploads
+/public/storage
+/storage/*.key
+/storage/assets
+/storage/app/public
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+.env
