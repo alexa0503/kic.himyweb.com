@@ -18,7 +18,7 @@ class MenuMiddleware
     {
         Menu::make('menu', function ($menu) {
             $menu->add('控制面板', ['url'=>'admin/dashboard','class'=>'bg-palette1']);
-            $menu->add('作品管理', ['route'=>('work.index'),'class'=>'bg-palette2']);
+            //$menu->add('作品管理', ['route'=>('work.index'),'class'=>'bg-palette2']);
         });
         return $next($request);
     }

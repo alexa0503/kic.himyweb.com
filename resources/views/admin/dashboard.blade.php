@@ -1,36 +1,45 @@
 @extends('layouts.admin')
 
 @section('content')
-
     <div class="padding-md">
-        <!--
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="page-title">
-                    Dashboard
+            <div class="smart-widget">
+                <div class="smart-widget-header">
+                    <form class="form-inline" >
+                        <div class="form-group">
+                            <a href="{{url('/admin/export')}}" class="btn btn-primary">导出</a>
+                        </div>
+                    </form>
                 </div>
-                <div class="page-sub-header">
-                    Welcome Back, John Doe , <i class="fa fa-map-marker text-danger"></i> London
-                </div>
+                <div class="smart-widget-inner">
+                    <div class="smart-widget-body">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>队名</th>
+                                <th>姓名</th>
+                                <th>手机号</th>
+                                <th>QQ</th>
+                                <th>创建时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            @foreach($items as $item)
+                                <tr>
+                                    <td>{{$item->id}}</td>
+                                    <td>{{$item->team}}</td>
+                                    <td>{{$item->name}}</td>
+                                    <td>{{$item->telephone}}</td>
+                                    <td>{{$item->qq}}</td>
+                                    <td>{{$item->created_at}}</td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                        {!! $items->links() !!}
+                    </div>
+                </div><!-- ./smart-widget-inner -->
             </div>
-            <div class="col-sm-6 text-right text-left-sm p-top-sm">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Select Project <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu pull-right" role="menu">
-                        <li><a href="index.html#">Project1</a></li>
-                        <li><a href="index.html#">Project2</a></li>
-                        <li><a href="index.html#">Project3</a></li>
-                        <li class="divider"></li>
-                        <li><a href="index.html#">Setting</a></li>
-                    </ul>
-                </div>
-
-                <a class="btn btn-default"><i class="fa fa-cog"></i></a>
-            </div>
-        </div>
-        -->
     </div><!-- ./padding-md -->
 @endsection
 @section('scripts')

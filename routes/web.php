@@ -32,6 +32,7 @@ Route::group(['middleware' => ['role:superadmin,global privileges', 'menu'], 'pr
         return redirect('/admin/dashboard');
     });
     Route::get('/dashboard', 'Admin\IndexController@index');
+    Route::get('/export', 'Admin\IndexController@export');
 });
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@postLogin');
