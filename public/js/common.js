@@ -113,17 +113,20 @@ function submitInfo(){
 				_token: window.Laravel.csrfToken,
 			}
 			$.post('/info', data, function(json){
-				canSubmit=true;
 				if(json.ret == 0){
 					alert('提交成功');
 				}
 				else{
+					canSubmit=true;
 					alert(json.msg);
 				}
 			},"JSON").fail(function(){
 				canSubmit=true;
 				alert('服务器错误');
 			})
+		}
+		else{
+			alert('您已经提交过啦');
 		}
 	}
 }
