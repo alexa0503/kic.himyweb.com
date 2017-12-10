@@ -40,7 +40,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/install', function () {
     if (\App\User::count() == 0) {
         $role = Role::create(['name' => 'superadmin']);
-        $permission = Permission::create(['name' => 'global privileges']);
+        //$permission = Permission::create(['name' => 'global privileges']);
         $role->givePermissionTo('global privileges');
         $user = new \App\User();
         $user->name = 'admin';

@@ -24,7 +24,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($items as $item)
+                            @foreach($infos as $item)
                                 <tr>
                                     <td>{{$item->id}}</td>
                                     <td>{{$item->team}}</td>
@@ -36,7 +36,7 @@
                             @endforeach
                             </tbody>
                         </table>
-                        {!! $items->links() !!}
+                        {!! $infos->links() !!}
                     </div>
                 </div><!-- ./smart-widget-inner -->
             </div>
