@@ -2,7 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>{{ config('app.name') }}</title>
+	<title>创智天地电竞嘉年华</title>
+	<meta name="description" content="2017创智天地电竞嘉年华由创智天地和Imba传媒联合主办，赛事分英雄联盟和王者荣耀两个项目">
+	<meta name="keywords" content="下壹站王者,创智天地,电竞嘉年华,王者荣耀精英赛">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 	<meta name="format-detection" content="telephone=no" />
@@ -62,8 +64,8 @@
 	}
 	@section('wxShareData')
 	var wxData = {
-		title: 'T3C红人征集令', // 分享标题
-		desc: '你负责与众不同，我负责让你一炮而红！', // 分享描述
+		title: '下壹站，王者！创智天地电竞嘉年华圣诞狂欢季', // 分享标题
+		desc: '2017创智天地电竞嘉年华火热招募中，创智天地携手Imba传媒联合打造，决出城市电竞王者，英雄联盟与王者荣耀两大项目同步开启！', // 分享描述
 		link: '{{url("/")}}', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
 		imgUrl: '{{asset("images/share.jpg")}}' // 分享图标
 	};
