@@ -67,4 +67,9 @@ class IndexController extends Controller
         fclose($file);
         return redirect(asset($filename));
     }
+    public function destroy($id)
+    {
+        \App\Info::destroy($id);
+        return response([]);
+    }
 }

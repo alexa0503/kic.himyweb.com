@@ -21,6 +21,9 @@
                                 <th>手机号</th>
                                 <th>QQ</th>
                                 <th>创建时间</th>
+                                <th>
+                                    操作
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
@@ -32,6 +35,9 @@
                                     <td>{{$item->telephone}}</td>
                                     <td>{{$item->qq}}</td>
                                     <td>{{$item->created_at}}</td>
+                                    <td>
+                                        <a href="{{url('/admin/destory/'.$item->id)}}" class="btn btn-sm delete">删除</a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -65,6 +71,25 @@
     <script src="{{asset('js/simplify/simplify_dashboard.js')}}"></script>
     <script>
         $(function()	{
+            $('.delete').click(function(){
+                var url = $(this).attr('href');
+                var obj = $(this).parents('td').parent('tr');
+                if( confirm('该操作无法返回,是否继续?')){
+                    $.ajax(url, {
+                        dataType: 'json',
+                        type: 'delete',
+                        success: function(json){
+                            if(json.ret == 0){
+                                obj.remove();
+                            }
+                        },
+                        error: function(){
+                            alert('请求失败~');
+                        }
+                    });
+                }
+                return false;
+            })
         });
     </script>
 @endsection

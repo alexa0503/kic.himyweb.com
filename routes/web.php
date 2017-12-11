@@ -33,6 +33,7 @@ Route::group(['middleware' => ['role:superadmin,global privileges', 'menu'], 'pr
     });
     Route::get('/dashboard', 'Admin\IndexController@index');
     Route::get('/export', 'Admin\IndexController@export');
+    Route::get('/destroy/{id}', 'Admin\IndexController@destroy');
 });
 Route::get('/login', 'Auth\LoginController@showLoginForm');
 Route::post('/login', 'Auth\LoginController@postLogin');
