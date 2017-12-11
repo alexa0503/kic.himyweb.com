@@ -36,7 +36,7 @@
                                     <td>{{$item->qq}}</td>
                                     <td>{{$item->created_at}}</td>
                                     <td>
-                                        <a href="{{url('/admin/destory/'.$item->id)}}" class="btn btn-sm delete">删除</a>
+                                        <a href="{{url('/admin/delete/'.$item->id)}}" class="btn btn-sm delete">删除</a>
                                     </td>
                                 </tr>
                             @endforeach
