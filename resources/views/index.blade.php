@@ -29,7 +29,7 @@
 <script>
 function wxShare(data) {
 	wx.ready(function () {
-		//document.getElementById('bgm').play();
+		document.getElementById('bgm').play();
 		wx.onMenuShareAppMessage({
 			title: data.title, // 分享标题
 			desc: data.desc, // 分享描述
