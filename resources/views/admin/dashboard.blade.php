@@ -77,7 +77,7 @@
                 if( confirm('该操作无法返回,是否继续?')){
                     $.ajax(url, {
                         dataType: 'json',
-                        type: 'delete',
+                        type: 'get',
                         success: function(json){
                             if(json.ret == 0){
                                 obj.remove();

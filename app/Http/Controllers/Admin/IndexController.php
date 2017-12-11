@@ -70,6 +70,6 @@ class IndexController extends Controller
     public function destroy($id)
     {
         \App\Info::destroy($id);
-        return response([]);
+        return response(['ret'=>0]);
     }
 }
